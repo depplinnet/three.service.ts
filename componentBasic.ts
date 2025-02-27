@@ -1,14 +1,21 @@
+
+// Impoertaciones del componente Angular Core
 import { Component, ElementRef, ViewChild, AfterViewInit, inject, HostListener, OnDestroy} from '@angular/core';
+
+// Importacion del servicio
 import { ThreeService } from '../../services/three.service';
 
+// Componente ancapsulado
 @Component({
-  selector: 'app-primer-nivel',
-  imports: [],
-  templateUrl: './primer-nivel.component.html',
-  styleUrl: './primer-nivel.component.css'
+  selector: 'app-primer-nivel', // Este es para llamar al componente
+  imports: [],                  // Importaciones
+  templateUrl: './primer-nivel.component.html', // LLama al HTML
+  styleUrl: './primer-nivel.component.css'    // LLama al CSS
 })
+  
 export class PrimerNivelComponent implements AfterViewInit, OnDestroy {
 
+  // Injectamos el servicio
   private threeService = inject(ThreeService);
 
   @ViewChild('threeCanvas') private canvasRef: ElementRef;
