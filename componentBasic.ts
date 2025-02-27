@@ -5,6 +5,9 @@ import { Component, ElementRef, ViewChild, AfterViewInit, inject, HostListener, 
 // Importacion del servicio
 import { ThreeService } from '../../services/three.service';
 
+
+
+
 // Componente ancapsulado
 @Component({
   selector: 'app-primer-nivel', // Este es para llamar al componente
@@ -12,7 +15,11 @@ import { ThreeService } from '../../services/three.service';
   templateUrl: './primer-nivel.component.html', // LLama al HTML
   styleUrl: './primer-nivel.component.css'    // LLama al CSS
 })
+
+
+
   
+// Aqui se exporta el componente y se implementa la logica.
 export class PrimerNivelComponent implements AfterViewInit, OnDestroy {
 
   // Injectamos el servicio
